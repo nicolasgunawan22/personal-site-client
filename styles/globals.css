@@ -6,6 +6,7 @@
 
 @layer base {
   html {
+    @apply scroll-smooth;
     font-family: Inter;
   }
   html,

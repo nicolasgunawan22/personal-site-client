@@ -40,7 +40,7 @@ const Home: NextPage = () => {
             <h3 className="text-2xl text-left mb-2">
               personal
             </h3>
-            <ul className="" >
+            <ul className="">
               <li className="text-3xl font-semibold mb-1">
                 bellyminer
               </li>
@@ -73,8 +73,8 @@ const Home: NextPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-3/4 mx-auto gap-4">
             {[1, 2, 3].map((i, index) => (
-              <div key={index} className="relative aspect-square group">
-                <div className="absolute aspect-square p-4 flex flex-col justify-end gap-2 z-10 text-slate-50">
+              <div key={index} className="relative aspect-square">
+                <div className="group absolute aspect-square p-4 flex flex-col justify-end gap-2 z-10 text-slate-50 cursor-pointer focus:outline-none hover:opacity-80 focus:ring focus:ring-[#404040]">
                   <div className='text-xs text-left flex justify-between items-center translate-y-16 group-hover:translate-y-0 transition-all ease-in-out duration-500'>
                     <span className="bg-slate-900 text-white font-bold px-1 py-0.5">Coding</span>
                     <span className="font-bold">2020-01-01</span>
