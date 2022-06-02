@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Container from 'components/Container/Container'
+import List from 'components/List/List'
 
 import me from 'public/images/me.png'
 
@@ -36,35 +37,14 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section id="#project" className="min-h-screen flex flex-col justify-center items-start gap-8">
-          <div>
-            <h3 className="text-2xl text-left mb-2">
-              personal
-            </h3>
-            <ul className="">
-              <li className="text-3xl font-semibold mb-1">
-                bellyminer
-              </li>
-              <li className="text-3xl font-semibold mb-1">
-                earthlone
-              </li>
-              <li className="text-3xl font-semibold mb-1">
-                hotcube
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-2xl text-left mb-2">
-              work
-            </h3>
-            <ul className="">
-              <li className="text-3xl font-semibold mb-1">
-                sirclo
-              </li>
-              <li className="text-3xl font-semibold mb-1">
-                ccs
-              </li>
-            </ul>
-          </div>
+          <List
+            title="personal"
+            items={['bellyminer', 'earthlone', 'hotcube']}
+          />
+          <List
+            title="work"
+            items={['sirclo', 'ccs']}
+          />
         </section>
         <section id="#blog" className="min-h-screen flex flex-col justify-center items-start gap-8">
           <div className="flex justify-between w-3/4 mx-auto border-b-2 border-b-[#202020] pb-2">
