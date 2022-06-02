@@ -5,4 +5,9 @@ describe('Home', () => {
    it('should work', () => {
       expect(true).toBeTruthy();
    })
+   it('renders my name', () => {
+      render(<Home />)
+      const name = screen.getByText(/Nicolas Gunawan/)
+      expect(name).toBeInTheDocument()
+   })
 })
