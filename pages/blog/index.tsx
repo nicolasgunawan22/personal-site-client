@@ -14,18 +14,18 @@ const Blog = () => {
             <h2 className="text-3xl font-semibold mb-1 text-center mt-16">Blog</h2>
             <div className="p-20">
                <ArticleCard
-                  title='Article 1'
-                  description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat dicta mollitia veritatis rem, eaque eum adipisci earum quo debitis quia."
+                  title='Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+                  description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. iste natus error sit voluptatem accusantium doloremque  doloremque laudantium. iste natus error."
                   date="May 21, 2022"
                   slug='blog/article-1'
                   timeToRead={1}
                />
                <ArticleCard
-                  title='Article 2'
-                  description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat dicta mollitia veritatis rem, eaque eum adipisci earum quo debitis quia."
+                  title='Lorem consectetur adipiscing elit'
+                  description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. iste natus error sit voluptatem accusantium doloremque  doloremque laudantium. iste natus error."
                   date="May 21, 2022"
                   slug='blog/article-2'
-                  timeToRead={1}
+                  timeToRead={5}
                />
             </div>
          </Container>
