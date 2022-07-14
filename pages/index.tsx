@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 import Container from 'components/Container/Container'
@@ -69,7 +70,9 @@ const Home: NextPage = () => {
         <section id="#blog" className="min-h-screen flex flex-col justify-center items-start gap-8">
           <div className="flex justify-between w-3/4 mx-auto border-b-2 border-b-[#202020] pb-2">
             <h3>latest article</h3>
-            <button className="font-bold">see all</button>
+            <Link href="/blog">
+              <a className="font-bold">see all</a>
+            </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-3/4 mx-auto gap-4">
             {[1, 2, 3].map((i, index) => (
