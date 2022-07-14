@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Container>
-        <section id="#" className="min-h-screen flex justify-center items-center gap-8">
+        <section id="#" className="relative min-h-screen flex justify-center items-center gap-8">
           <div className="flex flex-col justify-start items-start gap-8">
             <h1 className="text-5xl text-left">
               Hi, I&apos;m <span className="font-bold">Nicolas Gunawan</span><br />
@@ -35,7 +35,12 @@ const Home: NextPage = () => {
               height={250}
             />
           </div>
+          <div className="absolute bottom-0 mb-12 text-center">
+            <h5 className="text-lg font-bold">Daily Quotes</h5>
+            <p>Have the courage to follow your heart and intuition. They somehow know what you truly want to become. - Steve Jobs</p>
+          </div>
         </section>
+
         <section id="#project" className="min-h-screen flex flex-col justify-center items-start gap-8">
           <List
             title="personal"
