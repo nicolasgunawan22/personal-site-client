@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -7,6 +8,13 @@ import List from 'components/List/List'
 import me from 'public/images/me.png'
 
 const Home: NextPage = () => {
+  const [showProject, setShowProject] = useState<boolean>(false)
+  const [selectedProject, setSelectedProject] = useState<string>('')
+  function handleOnClickListItem(item: string) {
+    setShowProject(true)
+    setSelectedProject(item)
+  }
+
   return (
     <div>
       <Head>
@@ -41,15 +49,22 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <section id="#project" className="min-h-screen flex flex-col justify-center items-start gap-8">
+        <section id="#project" className="relative min-h-screen flex flex-col justify-center items-start gap-8">
           <List
             title="personal"
             items={['bellyminer', 'earthlone', 'hotcube']}
+            handleOnClick={handleOnClickListItem}
+            selected={selectedProject}
           />
           <List
             title="work"
             items={['sirclo', 'ccs']}
+            handleOnClick={handleOnClickListItem}
+            selected={selectedProject}
           />
+          <div className={`absolute right-0 text-center w-[35vw] h-[80vh] bg-slate-100 ${showProject ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} transition-all`}>
+            {selectedProject}
+          </div>
         </section>
         <section id="#blog" className="min-h-screen flex flex-col justify-center items-start gap-8">
           <div className="flex justify-between w-3/4 mx-auto border-b-2 border-b-[#202020] pb-2">
