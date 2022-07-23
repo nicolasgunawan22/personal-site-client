@@ -63,7 +63,7 @@ const Home: NextPage = () => {
             handleOnClick={handleOnClickListItem}
             selected={selectedProject}
           />
-          <div className={`absolute right-0 text-center w-[35vw] h-[80vh] bg-slate-100 ${showProject ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'} transition-all`}>
+          <div className={`absolute right-0 text-center w-[35vw] h-[80vh] bg-slate-100 ${showProject ? 'translate-x-0 inline-block' : 'translate-x-full hidden'} transition-all`}>
             {selectedProject}
           </div>
         </section>
