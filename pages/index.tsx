@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Container>
-        <section id="#" className="relative min-h-screen flex justify-center items-center gap-8">
+        <section id="home" className="relative min-h-screen flex justify-center items-center gap-8">
           <div className="flex flex-col justify-start items-start gap-8">
             <h1 className="text-5xl text-left">
               Hi, I&apos;m <span className="font-bold">Nicolas Gunawan</span><br />
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <section id="#project" className="relative min-h-screen flex flex-col justify-center items-start gap-8">
+        <section id="project" className="relative min-h-screen flex flex-col justify-center items-start gap-8">
           <List
             title="personal"
             items={['bellyminer', 'earthlone', 'hotcube']}
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
             {selectedProject}
           </div>
         </section>
-        <section id="#blog" className="min-h-screen flex flex-col justify-center items-start gap-8">
+        <section id="blog" className="min-h-screen flex flex-col justify-center items-start gap-8">
           <div className="flex justify-between w-3/4 mx-auto border-b-2 border-b-[#202020] pb-2">
             <h3>latest article</h3>
             <Link href="/blog">
@@ -102,7 +102,7 @@ const Home: NextPage = () => {
             ))}
           </div>
         </section>
-        <section id="#blog" className="min-h-screen flex flex-col justify-center items-center gap-12">
+        <section id="contact" className="min-h-screen flex flex-col justify-center items-center gap-12">
           <h2 className='text-2xl font-bold'>contact me</h2>
           <form className='flex flex-col gap-4 w-2/3' onSubmit={() => { }}>
             <div className='flex gap-4'>

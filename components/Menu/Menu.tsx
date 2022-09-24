@@ -5,6 +5,8 @@ import { useRouter } from 'next/router'
 
 import MenuIcon from 'assets/icons/MenuIcon'
 import CloseIcon from 'assets/icons/CloseIcon'
+import GithubIcon from 'assets/icons/Logo/GithubIcon'
+import InstagramIcon from 'assets/icons/Logo/InstagramIcon'
 
 type MenuProps = {
 
@@ -19,6 +21,25 @@ const Menu = ({
    const handleClick = () => {
       setOpen(prev => !prev)
    }
+
+   const menuLinks: { name: string, href: string }[] = [
+      {
+         name: "home",
+         href: "#home"
+      },
+      {
+         name: "project",
+         href: "#project"
+      },
+      {
+         name: "blog",
+         href: "#blog"
+      },
+      {
+         name: "contact",
+         href: "#contact"
+      },
+   ]
 
    return (
       <>
@@ -47,7 +68,8 @@ const Menu = ({
          )}
          <div
             className={`
-               fixed h-screen w-screen flex justify-center items-center right-0 top-0 backdrop-blur-md z-40 border-[#202020] border-4
+               fixed h-screen w-screen flex justify-center items-center right-0 top-0 
+               backdrop-blur-md z-40 border-[#202020] border-4
                ${isOpen ? 'animate-menu-grow' : 'h-0 w-0 border-0 mt-8 mr-16'} 
                transition-all ease-in-out
             `}
@@ -55,27 +77,38 @@ const Menu = ({
             {isOpen && (
                <nav>
                   <ul className="flex flex-col items-center justify-center gap-4 select-none">
-                     <li>
-                        <Link href="#home">
-                           <a className={`text-4xl font-bold uppercase tracking-wider`}>home</a>
-                        </Link>
-                     </li>
-                     <li>
-                        <Link href="#project">
-                           <a className="text-4xl uppercase tracking-wider">project</a>
-                        </Link>
-                     </li>
-                     <li>
-                        <Link href="#blog">
-                           <a className="text-4xl uppercase tracking-wider">blog</a>
-                        </Link>
-                     </li>
-                     <li>
-                        <Link href="#contact">
-                           <a className="text-4xl uppercase tracking-wider">contact</a>
-                        </Link>
-                     </li>
+                     {menuLinks.map((item, i) => {
+                        return (
+                           <li key={i}>
+                              <Link href={item.href}>
+                                 <a onClick={handleClick} className={`text-4xl uppercase tracking-wider`}>
+                                    {item.name}
+                                 </a>
+                              </Link>
+                           </li>
+                        )
+                     })}
                   </ul>
+                  <div className="flex w-full justify-center gap-8 mt-4">
+                     <Link href="https://github.com/nicolasgunawan22/">
+                        <a onClick={handleClick} className={`text-4xl uppercase tracking-wider`}>
+                           <GithubIcon
+                              width='32'
+                              height='32'
+                              fill="#202020"
+                           />
+                        </a>
+                     </Link>
+                     <Link href="https://www.instagram.com/nicolas_gunawan/">
+                        <a onClick={handleClick} className={`text-4xl uppercase tracking-wider`}>
+                           <InstagramIcon
+                              width='32'
+                              height='32'
+                              fill="#202020"
+                           />
+                        </a>
+                     </Link>
+                  </div>
                </nav>
             )}
          </div>

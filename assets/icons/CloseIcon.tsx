@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconPropsType } from 'typings/common'
+import { IconPropsType } from 'types/common'
 
 const MenuIcon = ({
    width = "30",
