@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Container from 'components/Container/Container'
 import List from 'components/List/List'
-
+import ArticleThumb from 'components/Article/ArticleThumb'
 import me from 'public/images/me.png'
 
 const Home: NextPage = () => {
@@ -76,29 +76,17 @@ const Home: NextPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-3/4 mx-auto gap-4">
             {[1, 2, 3].map((i, index) => (
-              <div key={index} className="relative aspect-square">
-                <div className="group absolute aspect-square p-4 flex flex-col justify-end gap-2 z-10 text-slate-50 cursor-pointer focus:outline-none hover:opacity-80 focus:ring focus:ring-[#404040]">
-                  <div className='text-xs text-left flex justify-between items-center translate-y-16 group-hover:translate-y-0 transition-all ease-in-out duration-500'>
-                    <span className="bg-slate-900 text-white font-bold px-1 py-0.5">Coding</span>
-                    <span className="font-bold">2020-01-01</span>
-                  </div>
-                  <h5 className="text-md text-left font-bold translate-y-16 group-hover:translate-y-0 transition-all ease-in-out duration-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sint eveniet consectetur.
-                  </h5>
-                  <p className='text-xs font-light translate-y-16 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all ease-in-out duration-500'>
-                    Nam vero explicabo blanditiis commodi earum quae mollitia! Fuga, ad cumque dicta ab distinctio facilis repellat mollitia?
-                  </p>
-                </div>
-                <div className="z-0">
-                  <Image
-                    src="https://images.unsplash.com/photo-1475823678248-624fc6f85785?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870"
-                    alt="me"
-                    className='brightness-75'
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-              </div>
+              <ArticleThumb
+                key={index}
+                category={"Coding"}
+                date={"2022-01-01"}
+                title={"Lorem ipsum dolor sit amet consectetur adipisicing elit"}
+                description={"Repellat, quam? Modi incidunt, culpa enim itaque facere velit voluptatibus sit maiores! Dolores magnam sed exercitationem ex minus perferendis totam facere quam."}
+                image={{
+                  src: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80",
+                  name: "coding"
+                }}
+              />
             ))}
           </div>
         </section>
