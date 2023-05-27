@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           <div className="flex flex-col justify-start items-start gap-8">
             <h1 className="text-5xl text-left">
               Hi, I&apos;m <span className="font-bold">Nicolas Gunawan</span><br />
-              <span className="font-bold">Full Stack Engineer</span>
+              <span className="font-bold">Software Engineer</span>
             </h1>
             <h2 className="text-2xl text-left">
               Based in Jakarta, Indonesia
