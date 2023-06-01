@@ -69,7 +69,7 @@ const Menu = ({
          <div
             className={`
                fixed h-screen w-screen flex justify-center items-center right-0 top-0 
-               backdrop-blur-md z-40 border-[#202020] border-4
+               backdrop-blur-md z-40
                ${isOpen ? 'animate-menu-grow' : 'h-0 w-0 border-0 mt-8 mr-16'} 
                transition-all ease-in-out
             `}
@@ -91,7 +91,7 @@ const Menu = ({
                   </ul>
                   <div className="flex w-full justify-center gap-8 mt-4">
                      <Link href="https://github.com/nicolasgunawan22/">
-                        <a onClick={handleClick} className={`text-4xl uppercase tracking-wider`}>
+                        <a target="_blank" onClick={handleClick} className={`text-4xl uppercase tracking-wider`}>
                            <GithubIcon
                               width='32'
                               height='32'
@@ -100,7 +100,7 @@ const Menu = ({
                         </a>
                      </Link>
                      <Link href="https://www.instagram.com/nicolas_gunawan/">
-                        <a onClick={handleClick} className={`text-4xl uppercase tracking-wider`}>
+                        <a target="_blank" onClick={handleClick} className={`text-4xl uppercase tracking-wider`}>
                            <InstagramIcon
                               width='32'
                               height='32'
