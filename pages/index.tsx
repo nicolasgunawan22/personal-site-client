@@ -7,6 +7,7 @@ import Container from 'components/Container/Container'
 import List from 'components/List/List'
 import ArticleThumb from 'components/Article/ArticleThumb'
 import me from 'public/images/me.png'
+import bellyminer from 'public/images/bellyminer.png'
 
 const Home: NextPage = () => {
   const [showProject, setShowProject] = useState<boolean>(false)
@@ -63,8 +64,29 @@ const Home: NextPage = () => {
             handleOnClick={handleOnClickListItem}
             selected={selectedProject}
           />
-          <div className={`absolute right-0 text-center w-[35vw] h-[80vh] bg-slate-100 ${showProject ? 'translate-x-0 inline-block' : 'translate-x-full hidden'} transition-all`}>
-            {selectedProject}
+          <div className={`absolute right-0 p-4 w-[35vw] bg-white ${showProject ? 'translate-x-0 inline-block' : 'translate-x-full hidden'} transition-all`}>
+            <div className={`relative bg-slate-100 w-full aspect-video mb-8`}>
+              <Image
+                src={bellyminer}
+                alt="bellyminer"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+            <div>
+              <p className="text-2xl font-bold">
+                {selectedProject}
+              </p>
+              <p className="mb-6">cryptocurrency mining tracking panel</p>
+              <p className="mb-2 font-bold">technologies</p>
+              <p className="mb-2">NextJS, Tailwind CSS, Express, MongoDB</p>
+              <p className="mb-2 font-bold">url</p>
+              <p className="mb-8">https://belly-miner-dashboard-two.vercel.app/login</p>
+              <div className="flex gap-4">
+                <button className="flex-1 px-4 py-2 bg-slate-100">go to website</button>
+                <button className="flex-1 px-4 py-2 bg-slate-100">details</button>
+              </div>
+            </div>
           </div>
         </section>
         <section id="blog" className="min-h-screen flex flex-col justify-center items-start gap-8">
